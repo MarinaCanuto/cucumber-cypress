@@ -12,17 +12,19 @@ Then('a página de cadastro deve ser exibida', () =>{
     cy.get('.text-5xl').should('contain','Cadastre-se no Hub de Leitura' )
 })
 
-When('eu preencho os campos obrigatórios', () =>{
-    cy.get('#name').type('marina')
-    cy.get('#email').type('marina@teste.com')
-    cy.get('#password').type('senha@123')
-    cy.get('#confirm-password').type('senha@123')
-    cy.get('.form-check').click()
+When('eu preencho os campos obrigatórios', () => {
+  const nome = `usuario${Date.now()}`
+  const email = `usuario${Date.now()}@teste.com`
+
+  cy.get('#name').type(nome)
+  cy.get('#email').type(email)
+  cy.get('#password').type('senha@123')
+  cy.get('.form-check').click()
 })
 
-When('clico no botão Criar Conta', () =>{
-    cy.get('#register-btn').click()
-})
+When('clico no botão Criar Conta', () => {
+  cy.get('#register-btn').should('exist').and('be.visible').click({ force: true });
+});
 
 Then('a conta deve ser criada com sucesso', () => {
   cy.url().should('include', 'dashboard.html');
