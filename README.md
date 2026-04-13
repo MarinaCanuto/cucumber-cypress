@@ -1,6 +1,8 @@
-# cucumber-cypress-exemplo
+# QA E2E Cypress BDD
 
-Exemplo de automação de testes usando Cypress com Cucumber para estudantes da EBAC.
+Projeto de automação de testes E2E utilizando Cypress com Cucumber (BDD), com foco na validação de fluxos de usuário em aplicações web.
+
+---
 
 ## 📋 Pré-requisitos
 
@@ -8,38 +10,65 @@ Exemplo de automação de testes usando Cypress com Cucumber para estudantes da 
 - npm ou yarn
 - Git
 
+---
+
 ## 🚀 Como usar este projeto
 
-### 1. Clone o repositório
-```bash
-git clone https://github.com/EBAC-QE/cucumber-cypress-exemplo.git
-cd cucumber-cypress-exemplo
-```
+### 1. Instalar dependências
 
-### 2. Instale as dependências
-```bash
 npm install
-```
 
-### 3. Execute os testes
-```bash
-# Executar testes em modo headless
+---
+
+### 2. Executar os testes
+
+▶️ Modo headless (terminal)
+
 npx cypress run
 
-# Executar testes com interface gráfica
+---
+
+▶️ Modo interface gráfica
+
 npx cypress open
-```
-# Excutar testes com tags
-```bash
+
+---
+
+### 3. Executar testes por tags (se configurado)
+
 npx cypress run --env tags='@learn'
-```
+
+---
+
+## 🧪 Cenários de teste
+
+- Login com sucesso
+- Login com credenciais inválidas
+- Validação de mensagens de erro
+- Fluxos básicos de autenticação
+
+---
 
 ## 🛠 Tecnologias utilizadas
 
-- **Cypress** - Framework de testes E2E
-- **Cucumber** - Ferramenta BDD para escrita de cenários
-- **JavaScript** - Linguagem de programação
+- Cypress — Framework de testes E2E
+- Cucumber — BDD (Behavior Driven Development)
+- JavaScript — Linguagem principal do projeto
+- Node.js — Ambiente de execução
+- npm — Gerenciador de pacotes
 
-## 📚 Recursos de aprendizado
+---
 
-Este projeto foi criado para fins educacionais da EBAC (Escola Britânica de Artes Criativas e Tecnologia).
+## 📚 Sobre o projeto
+
+Este projeto foi desenvolvido com fins de estudo e prática de automação de testes E2E utilizando Cypress e Cucumber (BDD), simulando cenários de testes reais de aplicações web.
+
+---
+
+## 🚀 Autor
+
+Projeto desenvolvido por Marina Sousa Canuto
+
+QA Tester em formação | Foco em automação de testes e qualidade de software
+
+
